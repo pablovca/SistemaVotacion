@@ -1,0 +1,27 @@
+table, th, tr, td {
+    font-family: 'Poppins';
+    font-size: 2rem;
+    border: 2px solid;
+    border-color: red;
+    border-collapse: collapse;
+}
+
+/*td {
+    background-color: cadetblue;
+}*/
+
+.voted {
+    background-color: chartreuse;
+}
+
+.not-voted {
+    background-color: coral;
+}
+
+.selected-to-vote {
+    background-color: aquamarine;
+}
+
+.disabled {
+    cursor: not-allowed;
+}

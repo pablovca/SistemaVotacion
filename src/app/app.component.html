@@ -1,0 +1,4 @@
+<div class="container" >
+    <vote-cards-container [voterInfo]="voterInfo"></vote-cards-container>
+    <students-table (canVoteEmitter)='receiveVoterInfo($event)'></students-table>
+</div>

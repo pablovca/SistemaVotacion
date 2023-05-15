@@ -1,0 +1,31 @@
+<table>
+    <thead>
+        
+        <tr>
+            <th>Seccion</th>
+            <th [attr.colspan]="studentsHeaderColspan">Estudiantes</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let section of sections">
+            <td>{{ section.id }}</td>
+            <!-- 
+                (click)="onSelectedStudent(i + 1, section.id)" 
+                *ngFor="let n of getStudentsArray(section.quantity); let i = index;"
+                value='{ "id": {{ i }} , "section": {{ i }} }'
+             -->
+            <td 
+            *ngFor="let i of getStudentsArray(section.quantity)"
+            [ngClass]="getIfStudentVotedById(i, section.id) ? 'voted' : 'not-voted'">
+             <input
+             value='{{ current_student | json }}'
+             (change)="onStudentSelected($event)"
+             type="radio" name="student-selection-button" [disabled]="current_student?.already_voted">
+                {{ i }}
+            </td>
+        </tr>
+    </tbody>
+
+
+</table>

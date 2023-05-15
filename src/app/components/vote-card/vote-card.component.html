@@ -1,0 +1,9 @@
+<div class="vote-card">
+    <img [src]="baseImgURL + party.id + '-president.png'">
+    <img [src]="baseImgURL + party.id + '-flag.png'">
+    <!-- <p>{{party.id}}</p> -->
+    <!-- <p>{{party?.votes}}</p> -->
+    <p>{{party.president_name}}</p>
+    <p>{{party.party_name}}</p>
+    <button (click)="onVoteButtonClick()" [disabled]="!isEnabled">Votar</button>
+</div>

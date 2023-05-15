@@ -1,0 +1,5 @@
+<div id="vote-cards-container" >
+    <div *ngFor="let party of parties">
+        <vote-card [party]="party" [voterInfo]="voterInfo" [isEnabled]="canVote" (voted)="disableAllButtons()"/>
+    </div>
+</div>
